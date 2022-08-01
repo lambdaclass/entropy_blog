@@ -244,10 +244,10 @@ Now, let's run it. In this case, the only new thing you need to know is that int
 "{a0: 1u32, a1: 2u32, a2: 3u32}"
 ```
 
-Now we can execute the `aleo run` command. We will clean and rebuild the project to pick up the new code:
+Now we can execute the `aleo run` command. We will clean the project to pick up the new code:
 
 ```
-aleo clean && aleo build && aleo run sum_one_to_array3 "{a0: 0u32, a1: 1u32, a2: 2u32}"
+aleo clean && aleo run sum_one_to_array3 "{a0: 0u32, a1: 1u32, a2: 2u32}"
 ```
 
 And we get the new array3 element as output:
@@ -365,7 +365,7 @@ where:
 
 Let's run the `transfer_amount` function:
 ``` bash
-aleo run transfer_amount "{
+aleo clean && aleo run transfer_amount "{
 owner: aleo1x5nz5u4j50w482t5xtqc3jdwly9s8saaxlgjz0wvmuzmxv2l5q9qmypx09.private,
 gates: 0u64.private,
 amount: 50u64.private
