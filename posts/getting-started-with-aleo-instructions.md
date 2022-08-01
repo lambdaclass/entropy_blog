@@ -145,7 +145,7 @@ First, we need to declare the program as follows:
 program foo.aleo;
 ```
 
-Then, we can start writing its functions (or other aleo structures such as interfaces, records, closures, as we will see later). In the case of functions we have it very easy:
+Then, we can start writing its functions (or other Aleo structures such as interfaces, records, closures, as we will see later). In the case of functions we have it very easy:
 
 ```
 function [function_name]:
