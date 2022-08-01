@@ -236,7 +236,7 @@ function sum_one_to_array3:
     output r4 as array3.private;
 ```
 
-As you can see, we can input a interface into register `r0` and access interface elements with the `.` syntax. We perform the `add` instruction on every element, storing the results in registers `r1`, `r2` and `r3` and, finally, we make use of the cast command to create a new array3 interface into `r4`.
+As you can see, we can input an interface into register `r0` and access interface elements with the `.` syntax. We perform the `add` instruction on every element, storing the results in registers `r1`, `r2` and `r3` and, finally, we make use of the cast command to create a new array3 interface into `r4`.
 
 Now, let's run it. In this case, the only new thing you need to know is that interfaces are passed to the cli in the following format:
 
