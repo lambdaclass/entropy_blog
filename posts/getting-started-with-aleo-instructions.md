@@ -402,7 +402,7 @@ We get the following output records:
 
 And that's it. You have transferred your first own-defined tokens in Aleo!
 
-Note: the _nonce is not written in Aleo instructions. The compiler outputs the _nonce in record outputs. The user needs to provide in as input when using a record.
+Note: the _nonce is not written in Aleo instructions. The compiler outputs the _nonce in record outputs. The user needs to provide it as input when using a record.
 
 
 ### Final remarks
