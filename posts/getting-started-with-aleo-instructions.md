@@ -350,7 +350,7 @@ To run this function, the first parameter is the input record of the program. Th
 
 ```
 {
-  owner: aleo1ljfzdypkggkzuvweyzat535r4kczzguyfmctwd67fm3vn6n9ggyqcx8tc7.private,
+  owner: aleo1x5nz5u4j50w482t5xtqc3jdwly9s8saaxlgjz0wvmuzmxv2l5q9qmypx09.private,
   gates: 0u64.private,
   amount: 50u64.private
 }
@@ -358,11 +358,12 @@ To run this function, the first parameter is the input record of the program. Th
 
 where:
 
-* owner: is the public address of the program.
-* gates: are the gates that the record has.
+* owner: the public address of the program, as found in the `development.address` of the build/program.json file.
+* gates: the gates that the record has.
 * other parameters: depending on the program itself (in this example, we used the parameter _amount_ with the value 50).
 
-Let's run the `transfer_amount` function:
+Let's run the `transfer_amount` function (if you are following along, remember to use the address found in the program.json for the owner field):
+
 ``` bash
 aleo clean && aleo run transfer_amount "{
 owner: aleo1x5nz5u4j50w482t5xtqc3jdwly9s8saaxlgjz0wvmuzmxv2l5q9qmypx09.private,
