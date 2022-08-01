@@ -52,7 +52,7 @@ aleo new foo
 This will create **foo** directory and the files with the basic structure of the project:
 
 * **README.md** having the skeleton of a README with instructions on how to compile.
-* **main.ale** the main file of the source code.
+* **main.aleo** the main file of the source code.
 * **program.json** containing the identification of the project in JSON format. Particularly, a dev address and its private key for the program.
 
 Let's open *main.aleo* and define the sum function:
