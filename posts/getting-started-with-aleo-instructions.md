@@ -215,7 +215,7 @@ Register are the places where you store data to then be able to modify it.
 
 Interfaces are user-defined data structures. They are very much like traditional structs in conventional programming languages. You can store Interfaces into registers, like with any other Aleo data types.
 
-For example, let's build an interface representing a fixed-size array of 3 elements:
+For example, let's build an interface representing a fixed-size array of 3 elements. Add this at the bottom of the *main.aleo* file:
 
 ```
 interface array3:
@@ -244,10 +244,10 @@ Now, let's run it. In this case, the only new thing you need to know is that int
 "{a0: 1u32, a1: 2u32, a2: 3u32}"
 ```
 
-Now we can execute the `aleo run` command:
+Now we can execute the `aleo run` command. We will clean and rebuild the project to pick up the new code:
 
 ```
-run sum_one_to_array3 "{a0: 0u32, a1: 1u32, a2: 2u32}"
+aleo clean && aleo build && aleo run sum_one_to_array3 "{a0: 0u32, a1: 1u32, a2: 2u32}"
 ```
 
 And we get the new array3 element as output:
