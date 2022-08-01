@@ -163,7 +163,7 @@ Everything in Aleo instructions is declared/stored inside a register with a type
 So, in this case, we use `r0`, and `r1` to store the inputs passed in sequential order to a program as `u32` values, where we can store 32-bit unsigned integers to perform our sum operation.
 
 
-* **The instructions section**. The next section, consists in the core of our function. Here we call the amount of Aleo Instructions we need to make our program do what we want. For example, performing an add operation:
+* **The instructions section**. The next section, consists in the core of our function. Here we call the amount of Aleo instructions we need to make our program do what we want. For example, performing an add operation:
 
 ```
     add r0 r1 into r2;
