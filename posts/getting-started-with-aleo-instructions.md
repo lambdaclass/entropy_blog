@@ -282,7 +282,7 @@ record token:
 
 the `owner` refers to the Aleo address that owns the record and `gates` is the amount of credits that the record has to spend.
 
-Records are important because they represent the basic aleo structure to handle state in your application.
+Records are important because they represent the basic Aleo structure to handle state in your application.
 
 When running an Aleo function, only registers that belong to the application address can be passed as input registers. Otherwise, an error would be raised and the application wouldn't run.
 
