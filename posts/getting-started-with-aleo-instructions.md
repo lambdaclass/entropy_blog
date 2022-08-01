@@ -348,12 +348,11 @@ This `transfer_amount` function receives 3 input parameters (`sender` record, `r
 
 To run this function, the first parameter is the input record of the program. The format of this parameter is the same as for interface types:
 
-
 ```
 {
   owner: aleo1ljfzdypkggkzuvweyzat535r4kczzguyfmctwd67fm3vn6n9ggyqcx8tc7.private,
   gates: 0u64.private,
-  amount: 100u64.private
+  amount: 50u64.private
 }
 ```
 
@@ -361,7 +360,7 @@ where:
 
 * owner: is the public address of the program.
 * gates: are the gates that the record has.
-* other parameters: depending on the program itself (in this example, we used the parameter _amount_ with the value 100).
+* other parameters: depending on the program itself (in this example, we used the parameter _amount_ with the value 50).
 
 Let's run the `transfer_amount` function:
 ``` bash
