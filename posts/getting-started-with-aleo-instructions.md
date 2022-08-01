@@ -244,7 +244,7 @@ Now, let's run it. In this case, the only new thing you need to know is that int
 "{a0: 1u32, a1: 2u32, a2: 3u32}"
 ```
 
-Now we can can the `aleo run` command:
+Now we can execute the `aleo run` command:
 
 ```
 run sum_one_to_array3 "{a0: 0u32, a1: 1u32, a2: 2u32}"
