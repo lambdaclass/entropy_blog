@@ -12,7 +12,7 @@ A finite field is a set equipped with two operations, which we will call $+$ and
 1. If $a$ and $b$ are in the set, then $c=a+b$ and $d=a*b$ should also be in the set. This is what is mathematically called a closed set under the operations $+$, $*$.
 2. There is a zero element, $0$, such that $a+0=a$ for any $a$ in the set. This element is called the additive identity.
 3. There is an element, $1$, such that $1*a=a$ for any $a$ in the set. This element is the multiplicative identity.
-                4. If $a$ is in the set, there is an element $b$, such that $a+b=0$. We call this element the additive inverse and we usually write it as $-a$.
+4. If $a$ is in the set, there is an element $b$, such that $a+b=0$. We call this element the additive inverse and we usually write it as $-a$.
 5. If $a$ is in the set, there is an element $c$ such that $a*c=1$. This element is called the multiplicative inverse and we write is as $a^{-1}$.
 
 Before we can talk about examples of finite fields, we need to introduce the modulo arithmetic. 
@@ -91,6 +91,3 @@ To get an idea on the number of elements of the group, they're about $r \approx 
 To be able to guarantee 128-bits of security, ECs need group orders near 256-bits (that is, orders with prime factors around $10^{77}$). This is because there are algorithms which can solve the problem doing operations around $\sqrt{r}$. If the largest prime is less than 94-bits long, it can be broken with help from a desktop computer. Of course, even if your group is large enough, nothing can save you from a poor implementation.
 
 The question arises: how can we know the number of elements of our EC? Luckily, math comes once again to our aid like the Hasse bound, Schoof's algorithm and how to test whether a number is prime or not. Next time we will continue revealing the math principles behind useful tools in cryptography.
-
-
-
