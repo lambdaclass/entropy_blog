@@ -39,15 +39,8 @@ If you run `aleo deploy` outside your program directory (lets say inside `/not_f
 
 And that is how you deploy an Aleo project. Easy right? That's the idea 😉.
 
-<!--
-## Checking your program was successfully deployed
-
-TODO
--->
-
 ## Working with Aleo Programs in Testnet3
 
 During Testnet3's life cycle all program deployments will be sent to the blockchain by Aleo Explorer on behalf of the user so no user credit spent is needed!
 
 This will help speed up the development and get helpful metrics for this testnet.
-
