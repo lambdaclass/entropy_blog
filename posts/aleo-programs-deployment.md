@@ -40,7 +40,7 @@ If you run `aleo deploy` outside your program directory (lets say inside `/not_f
 And that is how you deploy an Aleo project. Easy right? That's the idea 😉.
 
 <!--
-## Checking your program was succesfully deployed
+## Checking your program was successfully deployed
 
 TODO
 -->
