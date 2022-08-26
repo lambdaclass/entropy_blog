@@ -44,6 +44,5 @@ And that is how you deploy an Aleo project. Easy right? That's the idea 😉.
 
 ## Working with Aleo Programs in Testnet3
 
-During Testnet3's life cycle all program deployments will be expenditure to the blockchain by Aleo Explorer on behalf of the user so no user credit spent is needed!
-
-This will help to get useful metrics and speed up the development of this testnet! 
+For the initial Testnet3 rollout the deploy command will send deploys through the Aleo Explorer and the fees will be covered by the aleo node.
+This will help to get useful metrics and speed up the development of this testnet!
