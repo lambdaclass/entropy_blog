@@ -27,6 +27,13 @@ aleo deploy
 When you have done this you should see the following output:
 
 ```bash
+⏳ Compiling 'foo.aleo'...
+
+ • Loaded universal setup (in 1713 ms)
+ • Built 'hello' (in 7172 ms)
+
+✅ Built 'foo.aleo' (in "[...]/foo")
+
 ⏳ Deploying 'foo.aleo'...
 
  • Loaded universal setup (in 2174 ms)
