@@ -14,10 +14,12 @@ To deploy a program we first need to have a program to deploy:
 aleo new foo
 ```
 
-After creating your program, you can deploy it with:
+After creating your program, you need to build it in order to deploy it:
 
 ```bash
 cd foo
+
+aleo build
 
 aleo deploy
 ```
