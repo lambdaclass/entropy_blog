@@ -2,7 +2,7 @@
 
 This guide is a walkthrough on how to deploy Aleo programs in Testnet3 using the Aleo SDK.
 
-Before you can start deploying Aleo programs you must have the Aleo SDK installed and must have an Aleo Program created.
+Before you can start deploying Aleo programs you must have the Aleo SDK installed and must have an Aleo Program created and builded.
 
 You can follow the steps detailed in [our previous post](https://www.entropy1729.com/aleo-development-starter-pack/).
 
