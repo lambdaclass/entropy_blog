@@ -46,3 +46,5 @@ And that is how you deploy an Aleo project. Easy right? That's the idea 😉.
 
 For the initial Testnet3 rollout the deploy command will send deploys through the Aleo Explorer and the fees will be covered by the aleo node.
 This will help to get useful metrics and speed up the development of this testnet!
+
+In following posts, we will show you how to execute your deployed Aleo programs.
