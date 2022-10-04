@@ -1,0 +1,12 @@
+[package]
+name = "sgx-multithread-tls"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sgx-isa = { version = "0.2", features = ["sgxstd"] }
+chrono = "0.4"
+mbedtls = {version="0.5", default-features = false, features = ["sgx"]}
+
+[package.metadata.fortanix-sgx]
+threads=5
