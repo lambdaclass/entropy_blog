@@ -1,13 +1,12 @@
-# Software Guard Extensions (SGX)
+# How to implement a working Software Guard Extensions (SGX) project
 
-----------------------------------------
-## What is SGX ?
+## What is SGX?
 
-Intel SGX is a set of instructions used to enhance the security of application code and data, which gives the users a great level of protection. Intel SGX helps to keep the users’ sensitive data from being accessed by creating a trusted execution environment within memory..
+Intel SGX is a set of instructions used to enhance the security of application code and data, which gives the users a great level of protection. Intel SGX helps to keep the users’ sensitive data from being accessed by creating a trusted execution environment within memory.
 
-In other words, SGX encrypts sections of memory using security instructions native to the CPU. It’s a way of hardware-based encryption that allows users to protect their most-sensitive data by placing it into a highly secured environment.
+In other words, SGX encrypts sections of memory using security instructions native to the CPU. It’s a way of hardware-based encryption that allows users to protect their most sensitive data by placing it in a highly secure environment.
 
-Many industries can take advantage of the SGX, it's not only for IT Apps. Sensitive data may be medical records, finance and insurance assets, passwords, encryption keys, biometric identification and Military industry. In summary, any information that could cause harm if it's revealed.
+Many industries can take advantage of the SGX, it's not only for IT Apps. Sensitive data may be medical records, finance and insurance assets, passwords, encryption keys, biometric identification, and the Military industry. In summary, any information that could cause harm if it's revealed.
 
 To abstract from operating system security vulnerabilities that host devices may have, essential parts of the project are deployed in a specific trusted execution environment (TEEs).
 
@@ -45,12 +44,12 @@ It is a lightweight guest OS, designed to run a single Linux application with mi
 
 Gramine supports running Linux applications using the Intel SGX (Software Guard Extensions) technology (sometimes this version is called Gramine-SGX). With Intel SGX, applications are secured in hardware-encrypted memory regions (called SGX enclaves). SGX protects code and data in the enclave against privileged software attacks and against physical attacks on the hardware off the CPU package (e.g., cold-boot attacks on RAM). Gramine can run unmodified applications inside SGX enclaves, without the toll of manually porting the application to the SGX environment.
 
-Also, it exists companies that offer *commercial LibOS solutions* that support Intel SGX, for example [Fortanix](https://www.fortanix.com/).
+Also, there are companies that offer *commercial LibOS solutions* that support Intel SGX, for example [Fortanix](https://www.fortanix.com/).
 The Fortanix SGX ABI (compiler target x86_64-fortanix-unknown-sgx) is an interface for Intel SGX enclaves. It is a small yet functional interface suitable for writing larger enclaves. In contrast to other enclave interfaces, this interface is primarily designed for running entire applications in an enclave.
 
 It applies the microcode updates supplied by Intel® and disables hyperthreading on all systems. This prevents unauthorized access to the memory of SGX enclaves through side-channel attacks such as the Foreshadow vulnerability.
 
-## How is the interaction between the App and the Enclave ?
+## How is the interaction between the App and the Enclave?
 To illustrate how the interaction between an application and the enclave is, [Intel](https://www.intel.com/content/www/us/en/developer/articles/technical/sgx-intro-passing-data-between-app-and-enclave.html) presents a basic tutorial in C++ that we will follow next.
 
 ### Into the Enclave:
@@ -68,7 +67,7 @@ enclave {
 
 **enclaveInFunction()**
 
-This function demonstrates the use of an 'in' enclave byusing external/non-enclave variable to set an internal/enclave value. Data is sent from the application into the enclave.
+This function demonstrates the use of both an 'in' and 'out' enclave by swapping the values of the input string and the internal enclave string. Data is exchanged between the application and the enclave.
 
 **enclaveOutFunction()**
 
@@ -115,7 +114,7 @@ void enclaveInOutFunction(char *buf, size_t len)
 ```
 ### Application Code:
 
-SGX enclave code has no console output. To test the enclave function, a console application muest be created to calls the enclave functions.
+SGX enclave code has no console output. To test the enclave function, a console application must be created to call the enclave functions.
 
 ```
 #include "stdafx.h"
@@ -212,6 +211,6 @@ The remote attestation can be done in two different ways, one is [EPID attestati
 
 ## Wrapping up
 Intel SGX was designed both to protect the hardware and to protect the software from attacks.
-In hardware protection, the main feature is that The memory encryption key randomly changes every power cycle (for example, boot, sleep, or hibernate). The key is stored within the CPU and is not accessible.
-In software protection, we have that the enclave environment cannot be entered via classic function calls, jumps, register manipulation, or stack manipulation. The only way to call an enclave function is via a new instruction that performs several protective checks.
-There are many advantages to not considering the use of SGX.
+In hardware protection, the main feature is that the memory encryption key randomly changes every power cycle (for example, boot, sleep, or hibernate). The key is stored within the CPU and is not accessible.
+Regarding software protection, the enclave environment cannot be entered via classic function calls, jumps, register manipulation, or stack manipulation. The only way to call an enclave function is via a new instruction that performs several protective checks.
+As you can see there are many pros to the use of SGX.
