@@ -49,7 +49,7 @@ The Fortanix SGX ABI (compiler target x86_64-fortanix-unknown-sgx) is an interfa
 
 It applies the microcode updates supplied by Intel® and disables hyperthreading on all systems. This prevents unauthorized access to the memory of SGX enclaves through side-channel attacks such as the Foreshadow vulnerability.
 
-To run your own code with gramine, follow the [Quickstart](https://gramine.readthedocs.io/en/stable/quickstart.html). Notice installing it in Ubuntu, for example, Ubuntu 20.04, is just installing the gramine apt package with the following commands:
+To run your own code with Gramine, follow the [Quickstart](https://gramine.readthedocs.io/en/stable/quickstart.html). Notice installing it in Ubuntu, for example, Ubuntu 20.04, is just installing the Gramine apt package with the following commands:
 
 ``` sudo curl -fsSLo /usr/share/keyrings/gramine-keyring.gpg https://packages.gramineproject.io/gramine-keyring.gpg
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/gramine-keyring.gpg] https://packages.gramineproject.io/ stable main' | sudo tee /etc/apt/sources.list.d/gramine.list
