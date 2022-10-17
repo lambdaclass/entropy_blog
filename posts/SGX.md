@@ -6,7 +6,7 @@ Intel SGX is a set of instructions used to enhance the security of application c
 
 In other words, SGX encrypts sections of memory using security instructions native to the CPU. It’s a way of hardware-based encryption that allows users to protect their most sensitive data by placing it in a highly secure environment.
 
-Many industries can take advantage of the SGX, it's not only for IT Apps. Sensitive data may be medical records, finance and insurance assets, passwords, encryption keys, biometric identification, and the Military industry. In summary, any information that could cause harm if it's revealed.
+Many industries can take advantage of SGX, it's not only for IT Apps. Sensitive data may be medical records, finance and insurance assets, passwords, encryption keys, biometric identification, and the Military industry. In summary, any information that could cause harm if it's revealed.
 
 To abstract from operating system security vulnerabilities that host devices may have, essential parts of the project are deployed in a specific trusted execution environment (TEEs).
 
