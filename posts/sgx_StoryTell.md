@@ -81,7 +81,7 @@ apt install -y az-dcap-client
 
 And then restart AESM. 
 
-If AESM still don't work, try using the gramine docker image, and do the same inside the docker. To use gramine inside Docker:
+If AESM still doesn't work, try using the gramine docker image, and do the same inside the docker. To use gramine inside Docker:
 
 ```
 docker run --device /dev/sgx_enclave --device /dev/sgx_provision -it gramineproject/gramine
