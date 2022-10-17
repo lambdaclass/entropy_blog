@@ -229,4 +229,4 @@ Intel SGX was designed both to protect the hardware and to protect the software 
 In hardware protection, the main feature is that the memory encryption key randomly changes every power cycle (for example, boot, sleep, or hibernate). The key is stored within the CPU and is not accessible.
 On one hand, we have that the application performance is hurt due to the execution of many frequent operations on the CPU. This is very expensive in the enclave creation and destruction process. But on the other hand, the enclave environment cannot be entered via classic function calls, jumps, register manipulation, or stack manipulation.
 The only way to call an enclave function is via a new instruction that performs several protective checks.
-As you can see there are many pros to the use of SGX.
+As you can see there are many pros to the use of SGX, but the cons have to be weighed before deciding to implement it in your project. As with everything in life you have to balance the effort demanded versus the reward obtained. In the case of SGX when it makes sense to use it it's a really powerful solution.
