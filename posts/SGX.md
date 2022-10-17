@@ -227,6 +227,6 @@ The remote attestation can be done in two different ways, one is [EPID attestati
 ## Wrapping up
 Intel SGX was designed both to protect the hardware and to protect the software from attacks.
 In hardware protection, the main feature is that the memory encryption key randomly changes every power cycle (for example, boot, sleep, or hibernate). The key is stored within the CPU and is not accessible.
-One on hand, we have that the application performance is hurt due to the execution of many  frequent operations on the CPU. This is very expensive in the enclave creation and destruction process. But on the other hand, the enclave environment cannot be entered via classic function calls, jumps, register manipulation, or stack manipulation.
+On one hand, we have that the application performance is hurt due to the execution of many frequent operations on the CPU. This is very expensive in the enclave creation and destruction process. But on the other hand, the enclave environment cannot be entered via classic function calls, jumps, register manipulation, or stack manipulation.
 The only way to call an enclave function is via a new instruction that performs several protective checks.
 As you can see there are many pros to the use of SGX.
