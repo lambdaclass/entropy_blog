@@ -17,7 +17,6 @@ Intel SGX is an Intel Instruction Set Architecture (ISA) extension with TEEs sup
 The original goal was to secure the remote computation, it´s explained in this [paper](https://eprint.iacr.org/2016/086.pdf) published by MIT’s Computer Science and Artificial Intelligence Laboratory. 
 
 ## What is an SGX Enclave?
-
 Enclaves are memory zones that are isolated and contain sensitive, protected application data.
 The code and data in these memory sectors are only accessible within the enclave.
 When an application is run inside an enclave, the CPU instantly encrypts it and stores the key there.
