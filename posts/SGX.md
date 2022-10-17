@@ -44,7 +44,7 @@ It is a lightweight guest OS, designed to run a single Linux application with mi
 
 Gramine supports running Linux applications using the Intel SGX (Software Guard Extensions) technology (sometimes this version is called Gramine-SGX). With Intel SGX, applications are secured in hardware-encrypted memory regions (called SGX enclaves). SGX protects code and data in the enclave against privileged software attacks and against physical attacks on the hardware off the CPU package (e.g., cold-boot attacks on RAM). Gramine can run unmodified applications inside SGX enclaves, without the toll of manually porting the application to the SGX environment.
 
-Also, there are companies that offer *commercial LibOS solutions* that support Intel SGX, for example [Fortanix](https://www.fortanix.com/).
+Also, some companies offer *commercial LibOS solutions* that support Intel SGX, for example [Fortanix](https://www.fortanix.com/).
 The Fortanix SGX ABI (compiler target x86_64-fortanix-unknown-sgx) is an interface for Intel SGX enclaves. It is a small yet functional interface suitable for writing larger enclaves. In contrast to other enclave interfaces, this interface is primarily designed for running entire applications in an enclave.
 
 It applies the microcode updates supplied by Intel® and disables hyperthreading on all systems. This prevents unauthorized access to the memory of SGX enclaves through side-channel attacks such as the Foreshadow vulnerability.
