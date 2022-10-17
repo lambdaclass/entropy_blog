@@ -207,7 +207,7 @@ or
 ```
 make run
 ```
-The quantity of threads is defined in `Cargo.toml` file in the section `[package. metadata. fortanix-sgx]`. In this case there are defined 5 threads.
+The quantity of threads is defined in `Cargo.toml` file in the section `[package. metadata. fortanix-sgx]`. In this case, there are defined 5 threads.
 The limit of the threads depends on the available memory. If this limit is exceeded, the enclave close.
 In addition, it's not possible to join threads inside the enclave.
 
