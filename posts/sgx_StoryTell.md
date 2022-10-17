@@ -62,7 +62,7 @@ sudo apt-get update
 sudo apt-get install gramine      # for 5.11+ upstream, in-kernel driver 
 ```
 
-The out of tree drivers may not be needed, depending on your enviroment and what you are doing.
+The out of tree drivers may not be needed, depending on your environment and what you are doing.
 
 As a caveat, if you need to use DCAP in an Azure machine, do not install gramine DCAP library, nor try to install dependencies or services usually required for DCAP. Instead, install `azure-dcap-client`.
 
