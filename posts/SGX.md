@@ -75,7 +75,7 @@ This function demonstrates the use of an 'out' enclave by changing the value of 
 
 **enclaveInOutFunction()**
 
-This function demonstrates the use of both an 'in' and 'out' enclave by swapping the values of the input string and the internal enclave string. Data is exchanged between the application and enclave.
+This function demonstrates the use of both an 'in' and 'out' enclave by swapping the values of the input string and the internal enclave string. Data is exchanged between the application and the enclave.
 
 #### Enclave Code:
 
