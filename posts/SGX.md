@@ -36,7 +36,7 @@ There is a Filter drop-down menu. Scroll down and select Intel® Software Guard 
 To answer this question there are 2 options. They are presented by [Intel](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/get-started.html).
 ### Build your application.
 To build an application to run SGX, many pieces of code have to be rewritten in the source code.
-These parts have to be linked with the [Intel’s SGX SDK](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/linux-overview.html) to make it SGX ready.
+These parts have to be linked with [Intel’s SGX SDK](https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/linux-overview.html) to make it SGX ready.
 ### Secure Your Existing Application
 There are many *open-source LibOS projects* that support Intel SGX.
 The most popular is [Gramine](https://gramineproject.io/).
