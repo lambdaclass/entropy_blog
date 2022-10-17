@@ -40,7 +40,7 @@ These parts have to be linked with [Intel’s SGX SDK](https://www.intel.com/con
 ### Secure Your Existing Application
 There are many *open-source LibOS projects* that support Intel SGX.
 The most popular is [Gramine](https://gramineproject.io/).
-It is a lightweight guest OS, designed to run a single Linux application with minimal host requirements. Gramine can run applications in an isolated environment with benefits comparable to running a complete OS in a virtual machine – including guest customization, ease of porting to a different host OS, and process migration.on.
+It is a lightweight guest OS, designed to run a single Linux application with minimal host requirements. Gramine can run applications in an isolated environment with benefits comparable to running a complete OS in a virtual machine – including guest customization, ease of porting to a different host OS, and process migrations.
 
 Gramine supports running Linux applications using the Intel SGX (Software Guard Extensions) technology (sometimes this version is called Gramine-SGX). With Intel SGX, applications are secured in hardware-encrypted memory regions (called SGX enclaves). SGX protects code and data in the enclave against privileged software attacks and against physical attacks on the hardware off the CPU package (e.g., cold-boot attacks on RAM). Gramine can run unmodified applications inside SGX enclaves, without the toll of manually porting the application to the SGX environment.
 
