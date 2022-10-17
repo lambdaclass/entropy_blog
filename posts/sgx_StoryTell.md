@@ -49,6 +49,48 @@ The Fortanix SGX ABI (compiler target x86_64-fortanix-unknown-sgx) is an interfa
 
 It applies the microcode updates supplied by Intel® and disables hyperthreading on all systems. This prevents unauthorized access to the memory of SGX enclaves through side-channel attacks such as the Foreshadow vulnerability.
 
+To run your own code with gramine, follow the [Quickstart](https://gramine.readthedocs.io/en/stable/quickstart.html). Notice installing it in Ubuntu, for example, Ubuntu 20.04, is just installing the gramine apt package with the following commands:
+
+``` sudo curl -fsSLo /usr/share/keyrings/gramine-keyring.gpg https://packages.gramineproject.io/gramine-keyring.gpg
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/gramine-keyring.gpg] https://packages.gramineproject.io/ stable main' | sudo tee /etc/apt/sources.list.d/gramine.list
+
+curl -fsSL https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key | sudo apt-key add -
+echo 'deb [arch=amd64] https://download.01.org/intel-sgx/sgx_repo/ubuntu focal main' | sudo tee /etc/apt/sources.list.d/intel-sgx.list
+
+sudo apt-get update
+
+sudo apt-get install gramine      # for 5.11+ upstream, in-kernel driver 
+```
+
+The out of tree drivers may not be needed, depending on your enviroment and what you are doing.
+
+As a caveat, if you need to use DCAP in an Azure machine, do not install gramine DCAP library, nor try to install dependencies or services usually required for DCAP. Instead, install `azure-dcap-client`.
+
+To do this:
+
+```
+# enable Microsoft software repository
+apt install -y wget
+echo "deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/prod focal main" | tee /etc/apt/sources.list.d/msprod.list
+wget -qO - https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+
+# install Azure DCAP library
+apt update
+apt install -y az-dcap-client
+```
+
+And then restart AESM. 
+
+If AESM still don't work, try using the gramine docker image, and do the same inside the docker. To use gramine inside Docker:
+
+```
+docker run --device /dev/sgx_enclave --device /dev/sgx_provision -it gramineproject/gramine
+```
+And inside, if DCAP is needed, run the same commands as before, but restart AESM with:
+
+```
+./restart_aesm.sh
+```
 ## How is the interaction between the App and the Enclave?
 To illustrate how the interaction between an application and the enclave is, [Intel](https://www.intel.com/content/www/us/en/developer/articles/technical/sgx-intro-passing-data-between-app-and-enclave.html) presents a basic tutorial in C++ that we will follow next.
 
